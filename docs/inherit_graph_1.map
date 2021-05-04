@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" title=" " alt="" coords="5,56,87,83"/>
+<area shape="rect" id="node2" href="$class_m_d_edit_1_1_cache_updated_event_args.html" title="Event data for the AsynchronousImageCache.CacheUpdated event." alt="" coords="141,5,355,32"/>
+<area shape="rect" id="node3" href="$class_m_d_edit_1_1_preview_rendered_event_args.html" title="A class to hold data for an event where the document preview has been rendered." alt="" coords="135,56,361,83"/>
+<area shape="rect" id="node4" href="$class_m_d_edit_1_1_save_event_args.html" title="A class to hold data for an event where the user has requested to save the document." alt="" coords="170,107,326,133"/>
+</map>

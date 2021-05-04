@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Authors>Giorgio Bianchini</Authors>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Company>University of Bristol</Company>
+    <Description>MDEdit - A Markdown source code editor with syntax highlighting and real-time preview.</Description>
+    <PackageLicenseExpression>GPL-3.0-only</PackageLicenseExpression>
+    <Version>1.0.0</Version>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageProjectUrl>https://github.com/arklumpus/MDEdit</PackageProjectUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DocumentationFile></DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DocumentationFile></DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\icon.png">
+      <Pack>true</Pack>
+      <PackagePath>.</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Fonts\OpenSans-Bold.ttf" />
+    <EmbeddedResource Include="Fonts\OpenSans-BoldItalic.ttf" />
+    <EmbeddedResource Include="Fonts\OpenSans-Italic.ttf" />
+    <EmbeddedResource Include="Fonts\OpenSans-Regular.ttf" />
+    <EmbeddedResource Include="Fonts\RobotoMono-Bold.ttf" />
+    <EmbeddedResource Include="Fonts\RobotoMono-BoldItalic.ttf" />
+    <EmbeddedResource Include="Fonts\RobotoMono-Italic.ttf" />
+    <EmbeddedResource Include="Fonts\RobotoMono-Regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="0.10.0" />
+    <PackageReference Include="Avalonia.Desktop" Version="0.10.0" />
+    <PackageReference Include="DiffPlex" Version="1.7.0" />
+    <PackageReference Include="IntellisenseIcon" Version="1.1.2" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="3.8.0" />
+    <PackageReference Include="System.CodeDom" Version="5.0.0" />
+    <PackageReference Include="System.Text.Json" Version="5.0.2" />
+    <PackageReference Include="VectSharp.Canvas" Version="2.1.8" />
+    <PackageReference Include="VectSharp.MarkdownCanvas" Version="1.0.5" />
+  </ItemGroup>
+</Project>

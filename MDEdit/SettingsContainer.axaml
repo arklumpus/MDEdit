@@ -38,8 +38,8 @@
       <Setter Property="Background" Value="#ffedc8" />
       <Setter Property="BorderBrush" Value="#d2a85e" />
     </Style>
-  
-   <Style Selector="Button.saving">
+
+    <Style Selector="Button.saving">
       <Setter Property="Background" Value="#ccd5f0" />
       <Setter Property="BorderBrush" Value="{x:Null}" />
     </Style>
@@ -54,7 +54,7 @@
     <StackPanel Orientation="Horizontal" Margin="5, 2, 5, 3">
       <Button Name="LoadSettingsButton" Classes="saving" Focusable="False">
         <StackPanel Orientation="Horizontal">
-        <icon:LoadSettingsIcon />
+          <icon:LoadSettingsIcon />
           <TextBlock Margin="5,0,5,0" VerticalAlignment="Center">Load settings</TextBlock>
         </StackPanel>
       </Button>
@@ -66,8 +66,8 @@
         </StackPanel>
       </Button>
     </StackPanel>
-      
-    <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Grid.Row="1">
+
+    <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Grid.Row="1" AllowAutoHide="False" Padding="0,0,16,0">
       <StackPanel Background="White">
         <Border BorderBrush="#40568d" BorderThickness="2" Margin="5,15,5,5" Padding="10" CornerRadius="10" Background="White">
           <StackPanel>
@@ -179,6 +179,11 @@
           <StackPanel>
             <TextBlock FontWeight="Bold" FontSize="16" Margin="0,-22,0,0" Background="White" HorizontalAlignment="Left" Padding="5,0,5,0">Keyboard shortcuts</TextBlock>
             <ScrollViewer VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Auto">
+              <ScrollViewer.Styles>
+                <Style Selector="ScrollViewer[IsExpanded=true]">
+                  <Setter Property="Padding" Value="0,0,0,16" />
+                </Style>
+              </ScrollViewer.Styles>
               <Grid Name="ShortcutGridContainer">
                 <Grid.ColumnDefinitions>
                   <ColumnDefinition Width="1*" />

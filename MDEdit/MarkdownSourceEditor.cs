@@ -841,7 +841,7 @@ namespace MDEdit
                 {
                     await PerformTextInput(new string(' ', Utils.Tab.Length * indentationLevel));
                 }
-                
+
                 if (lineText.TrimStart().StartsWith("> "))
                 {
                     await PerformTextInput("> ");
@@ -1745,10 +1745,15 @@ namespace MDEdit
 
             double oX = this.Offset.X;
 
-            if (caretX - this.Offset.X > this.Bounds.Width - 1)
+            if (this.Bounds.Height >= this.Extent.Height && caretX - this.Offset.X > this.Bounds.Width - 1)
             {
-                oX = caretX - this.Bounds.Width + 1;
+                oX = caretX - this.Bounds.Width + 1 + 5;
             }
+            else if (this.Bounds.Height < this.Extent.Height && caretX - this.Offset.X > this.Bounds.Width - 1 - 20)
+            {
+                oX = caretX - this.Bounds.Width + 1 + 20;
+            }
+
 
             if (caretX - this.Offset.X < 25 + this.LineNumbersWidth)
             {

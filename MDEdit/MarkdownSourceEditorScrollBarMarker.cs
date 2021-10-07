@@ -31,7 +31,7 @@ namespace MDEdit
         public MarkdownSourceEditorScrollBarMarker(MarkdownSourceEditor editor)
         {
             this.Editor = editor;
-            this.Width = 18;
+            this.Width = 16;
             this.HorizontalAlignment = Avalonia.Layout.HorizontalAlignment.Right;
             this.IsHitTestVisible = false;
         }
@@ -49,14 +49,14 @@ namespace MDEdit
 
                 if (Editor.Extent.Width > Editor.Bounds.Width)
                 {
-                    totalHeight -= 18;
+                    totalHeight -= 16;
                 }
 
                 double totalLines = Editor.Text.Lines.Count;
 
                 foreach (HighlightedLineRange range in this.Editor.HighlightedLines)
                 {
-                    context.FillRectangle(range.HighlightBrush, MarkdownSourceEditorCaret.Round(new Avalonia.Rect(0, 18 + range.LineSpan.Start / totalLines * totalHeight, 4, (range.LineSpan.Length + 1) / totalLines * totalHeight), new Avalonia.Size(1, 1)));
+                    context.FillRectangle(range.HighlightBrush, MarkdownSourceEditorCaret.Round(new Avalonia.Rect(0, 16 + range.LineSpan.Start / totalLines * totalHeight, 4, (range.LineSpan.Length + 1) / totalLines * totalHeight), new Avalonia.Size(1, 1)));
                 }
 
                 HashSet<int> greenLines = new HashSet<int>();
@@ -78,7 +78,7 @@ namespace MDEdit
 
                 foreach (HighlightedLineRange range in greenLineSpans)
                 {
-                    context.FillRectangle(range.HighlightBrush, MarkdownSourceEditorCaret.Round(new Avalonia.Rect(14, 18 + range.LineSpan.Start / totalLines * totalHeight, 4, (range.LineSpan.Length + 1) / totalLines * totalHeight), new Avalonia.Size(1, 1)));
+                    context.FillRectangle(range.HighlightBrush, MarkdownSourceEditorCaret.Round(new Avalonia.Rect(12, 16 + range.LineSpan.Start / totalLines * totalHeight, 4, (range.LineSpan.Length + 1) / totalLines * totalHeight), new Avalonia.Size(1, 1)));
                 }
 
                 if (this.Editor.SearchReplace.IsVisible)
@@ -96,11 +96,11 @@ namespace MDEdit
 
                     foreach (int line in searchMatches)
                     {
-                        context.FillRectangle(SearchBrush, MarkdownSourceEditorCaret.Round(new Avalonia.Rect(7, 18 + line / totalLines * totalHeight, 4, 1.0 / totalLines * totalHeight), new Avalonia.Size(1, 1)));
+                        context.FillRectangle(SearchBrush, MarkdownSourceEditorCaret.Round(new Avalonia.Rect(6, 16 + line / totalLines * totalHeight, 4, 1.0 / totalLines * totalHeight), new Avalonia.Size(1, 1)));
                     }
                 }
 
-                context.FillRectangle(CaretPositionBrush, MarkdownSourceEditorCaret.Round(new Avalonia.Rect(0, 18 + (Editor.Text.Lines.GetLinePosition(Editor.CaretOffset).Line + 0.5) / totalLines * totalHeight - 1, 18, 2), new Avalonia.Size(1, 1)));
+                context.FillRectangle(CaretPositionBrush, MarkdownSourceEditorCaret.Round(new Avalonia.Rect(0, 16 + (Editor.Text.Lines.GetLinePosition(Editor.CaretOffset).Line + 0.5) / totalLines * totalHeight - 1, 18, 2), new Avalonia.Size(1, 1)));
             }
         }
     }

@@ -783,9 +783,9 @@ namespace MDEdit
                 }
             }
 
-            List<List<VectSharp.Markdown.FormattedString>> lines = VectSharp.Markdown.SyntaxHighlighter.GetSyntaxHighlightedLines(code.ToString(0, code.Length - 1), info);
+            List<List<VectSharp.Markdown.FormattedString>> lines = VectSharp.Markdown.SyntaxHighlighter.GetSyntaxHighlightedLines(code.ToString(0, Math.Max(0, code.Length - 1)), info);
 
-            if (lines == null || lines.Count == 0)
+            if (lines == null || lines.Count == 0 || code.Length == 0)
             {
                 AddPlainBlock(colorRanges, codeBlock, firstCharacter, lastCharacter, currentColors.Add(SyntaxHighlightingColors.CodeColor), currentBold, currentItalic, currentUnderline, currentScriptPos);
                 return;

@@ -569,28 +569,28 @@ namespace MDEdit
                     {
                         colorRanges.Add((inline.Span.Start, inline.Span.End + 1, GetBrush(currentColors), currentBold, currentItalic, currentUnderline, currentScriptPos));
 
-                        if (link.LabelSpan.HasValue)
+                        if (link.LabelSpan != null)
                         {
-                            colorRanges.Add((link.LabelSpan.Value.Start, link.LabelSpan.Value.End + 1, GetBrush(currentColors.Add(SyntaxHighlightingColors.ImageColor)), currentBold, currentItalic, currentUnderline, currentScriptPos));
+                            colorRanges.Add((link.LabelSpan.Start, link.LabelSpan.End + 1, GetBrush(currentColors.Add(SyntaxHighlightingColors.ImageColor)), currentBold, currentItalic, currentUnderline, currentScriptPos));
                         }
 
-                        if (link.UrlSpan.HasValue)
+                        if (link.UrlSpan != null)
                         {
-                            colorRanges.Add((link.UrlSpan.Value.Start, link.UrlSpan.Value.End + 1, GetBrush(currentColors.Add(SyntaxHighlightingColors.ImageColor)), currentBold, currentItalic, currentUnderline | true, currentScriptPos));
+                            colorRanges.Add((link.UrlSpan.Start, link.UrlSpan.End + 1, GetBrush(currentColors.Add(SyntaxHighlightingColors.ImageColor)), currentBold, currentItalic, currentUnderline | true, currentScriptPos));
                         }
                     }
                     else
                     {
                         colorRanges.Add((inline.Span.Start, inline.Span.End + 1, GetBrush(currentColors), currentBold, currentItalic, currentUnderline, currentScriptPos));
 
-                        if (link.LabelSpan.HasValue)
+                        if (link.LabelSpan != null)
                         {
-                            colorRanges.Add((link.LabelSpan.Value.Start, link.LabelSpan.Value.End + 1, GetBrush(currentColors.Add(SyntaxHighlightingColors.LinkColor)), currentBold, currentItalic, currentUnderline, currentScriptPos));
+                            colorRanges.Add((link.LabelSpan.Start, link.LabelSpan.End + 1, GetBrush(currentColors.Add(SyntaxHighlightingColors.LinkColor)), currentBold, currentItalic, currentUnderline, currentScriptPos));
                         }
 
-                        if (link.UrlSpan.HasValue)
+                        if (link.UrlSpan != null)
                         {
-                            colorRanges.Add((link.UrlSpan.Value.Start, link.UrlSpan.Value.End + 1, GetBrush(currentColors.Add(SyntaxHighlightingColors.LinkColor)), currentBold, currentItalic, currentUnderline | true, currentScriptPos));
+                            colorRanges.Add((link.UrlSpan.Start, link.UrlSpan.End + 1, GetBrush(currentColors.Add(SyntaxHighlightingColors.LinkColor)), currentBold, currentItalic, currentUnderline | true, currentScriptPos));
                         }
                     }
                 }

@@ -16,9 +16,9 @@
     <EmbeddedResource Include="HelloWorld.md" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Avalonia" Version="0.10.7" />
-    <PackageReference Include="Avalonia.Desktop" Version="0.10.7" />
-    <PackageReference Include="VectSharp.MuPDFUtils" Version="1.1.4" />
+    <PackageReference Include="Avalonia" Version="0.10.18" />
+    <PackageReference Include="Avalonia.Desktop" Version="0.10.18" />
+    <PackageReference Include="VectSharp.MuPDFUtils" Version="1.1.8" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MDEdit\MDEdit.csproj" />

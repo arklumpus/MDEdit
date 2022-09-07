@@ -48,13 +48,13 @@ namespace MDEdit
 
         static Editor()
         {
-            RobotoMonoRegular = new VectSharp.Canvas.ResourceFontFamily(typeof(Editor).Assembly.GetManifestResourceStream("MDEdit.Fonts.RobotoMono-Regular.ttf"), "resm:MDEdit.Fonts.?assembly=MDEdit#Roboto Mono");
+            RobotoMonoRegular = new VectSharp.ResourceFontFamily(typeof(Editor).Assembly.GetManifestResourceStream("MDEdit.Fonts.RobotoMono-Regular.ttf"), "resm:MDEdit.Fonts.?assembly=MDEdit#Roboto Mono");
 
-            OpenSansRegular = new VectSharp.Canvas.ResourceFontFamily(typeof(Editor).Assembly.GetManifestResourceStream("MDEdit.Fonts.OpenSans-Regular.ttf"), "resm:MDEdit.Fonts.?assembly=MDEdit#Open Sans");
-            OpenSansBold = new VectSharp.Canvas.ResourceFontFamily(typeof(Editor).Assembly.GetManifestResourceStream("MDEdit.Fonts.OpenSans-Bold.ttf"), "resm:MDEdit.Fonts.?assembly=MDEdit#Open Sans");
+            OpenSansRegular = new VectSharp.ResourceFontFamily(typeof(Editor).Assembly.GetManifestResourceStream("MDEdit.Fonts.OpenSans-Regular.ttf"), "resm:MDEdit.Fonts.?assembly=MDEdit#Open Sans");
+            OpenSansBold = new VectSharp.ResourceFontFamily(typeof(Editor).Assembly.GetManifestResourceStream("MDEdit.Fonts.OpenSans-Bold.ttf"), "resm:MDEdit.Fonts.?assembly=MDEdit#Open Sans");
 
-            OpenSansItalic = new VectSharp.Canvas.ResourceFontFamily(typeof(Editor).Assembly.GetManifestResourceStream("MDEdit.Fonts.OpenSans-Italic.ttf"), "resm:MDEdit.Fonts.?assembly=MDEdit#Open Sans");
-            OpenSansBoldItalic = new VectSharp.Canvas.ResourceFontFamily(typeof(Editor).Assembly.GetManifestResourceStream("MDEdit.Fonts.OpenSans-BoldItalic.ttf"), "resm:MDEdit.Fonts.?assembly=MDEdit#Open Sans");
+            OpenSansItalic = new VectSharp.ResourceFontFamily(typeof(Editor).Assembly.GetManifestResourceStream("MDEdit.Fonts.OpenSans-Italic.ttf"), "resm:MDEdit.Fonts.?assembly=MDEdit#Open Sans");
+            OpenSansBoldItalic = new VectSharp.ResourceFontFamily(typeof(Editor).Assembly.GetManifestResourceStream("MDEdit.Fonts.OpenSans-BoldItalic.ttf"), "resm:MDEdit.Fonts.?assembly=MDEdit#Open Sans");
         }
         #endregion
 
@@ -145,7 +145,7 @@ namespace MDEdit
 
             string autosaveDirectory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), Assembly.GetEntryAssembly().GetName().Name);
             Directory.CreateDirectory(Path.Combine(autosaveDirectory, Guid));
-            AutoSaveFile = Path.Combine(autosaveDirectory, Guid, "autosave_" + System.Guid.NewGuid().ToString("N") + ".cs");
+            AutoSaveFile = Path.Combine(autosaveDirectory, Guid, "autosave_" + System.Guid.NewGuid().ToString("N") + ".md");
             SaveDirectory = Path.Combine(autosaveDirectory, Guid);
             this.AutoSaver = AutoSaver.Start(this, AutoSaveFile);
 

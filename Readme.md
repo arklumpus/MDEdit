@@ -2,6 +2,9 @@
 
 <img src="Icon.svg" width="256" align="right">
 
+[![License: GPL v3](https://img.shields.io/badge/License-GPL_v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![Version](https://img.shields.io/nuget/v/MDEdit)](https://nuget.org/packages/MDEdit)
+
 ## Introduction
 
 **MDEdit** is a Markdown source code editor control for [Avalonia](https://github.com/AvaloniaUI/Avalonia) applications.

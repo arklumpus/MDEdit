@@ -7,7 +7,7 @@
     <Company>University of Bristol</Company>
     <Description>MDEdit - A Markdown source code editor with syntax highlighting and real-time preview.</Description>
     <PackageLicenseExpression>GPL-3.0-only</PackageLicenseExpression>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <PackageIcon>icon.png</PackageIcon>
     <PackageProjectUrl>https://github.com/arklumpus/MDEdit</PackageProjectUrl>
   </PropertyGroup>
@@ -42,10 +42,10 @@
     <PackageReference Include="Avalonia.Desktop" Version="0.10.18" />
     <PackageReference Include="DiffPlex" Version="1.7.1" />
     <PackageReference Include="IntellisenseIcon" Version="1.1.2" />
-    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="4.3.0" />
-    <PackageReference Include="System.CodeDom" Version="6.0.0" />
-    <PackageReference Include="System.Text.Json" Version="6.0.5" />
-    <PackageReference Include="VectSharp.Canvas" Version="2.5.3" />
-    <PackageReference Include="VectSharp.MarkdownCanvas" Version="1.4.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="4.4.0" />
+    <PackageReference Include="System.CodeDom" Version="7.0.0" />
+    <PackageReference Include="System.Text.Json" Version="7.0.1" />
+    <PackageReference Include="VectSharp.Canvas" Version="2.6.0" />
+    <PackageReference Include="VectSharp.MarkdownCanvas" Version="1.4.1" />
   </ItemGroup>
 </Project>
